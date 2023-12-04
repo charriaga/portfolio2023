@@ -28,6 +28,19 @@ class App extends Component {
     this.loadResumeFromPath(resumePath);
   }
 
+  swapCurrentlyActiveLanguage = (oppositeLangIconId) => {
+    var pickedLangIconId =
+      oppositeLangIconId === window.$primaryLanguageIconId
+        ? window.$secondaryLanguageIconId
+        : window.$primaryLanguageIconId;
+    document
+      .getElementById(oppositeLangIconId)
+      .removeAttribute("filter", "brightness(40%)");
+    document
+      .getElementById(pickedLangIconId)
+      .setAttribute("filter", "brightness(40%)");
+  }
+
   componentDidMount = () => {
     this.loadSharedData();
     this.applyPickedLanguage(
@@ -86,7 +99,7 @@ class App extends Component {
         </Routes>
         <Footer 
           sharedBasicInfo={this.state.sharedData.basic_info}
-          applyPickedLanguage={this.applyPickedLanguage} 
+
         />  
       </Router>
     );

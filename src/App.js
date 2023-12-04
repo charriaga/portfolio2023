@@ -20,10 +20,6 @@ class App extends Component {
 
   componentDidMount = () => {
     this.loadSharedData();
-    this.applyPickedLanguage(
-      window.$primaryLanguage,
-      window.$secondaryLanguageIconId
-    );
   }
 
   loadResumeFromPath = (path) => {

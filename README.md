@@ -1,3 +1,5 @@
 # Modify this portfolio
 
-Make it your own! 
+Portfolio of Charlie Arriaga
+
+https://charlieaportfolio.netlify.app/
